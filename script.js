@@ -3,11 +3,11 @@ const ADMIN_PASSWORD = "codechef123";
 const categories = ["Coding", "Hackathon", "Workshop", "Competition", "Seminar", "Other"];
 
 const sampleEvents = [
-  { id: "evt-1", name: "CodeSprint 2026", category: "Coding", date: "2026-10-24", time: "10:00", venue: "Computer Lab 2", description: "A 3-hour individual coding contest with problems from easy to hard.", featured: true },
-  { id: "evt-2", name: "HackForge", category: "Hackathon", date: "2026-11-07", time: "09:00", venue: "Main Auditorium", description: "A 24-hour team hackathon to build something useful for campus life.", featured: false },
-  { id: "evt-3", name: "Frontend Fundamentals", category: "Workshop", date: "2026-10-18", time: "14:00", venue: "Seminar Hall", description: "A hands-on workshop on HTML, CSS and JavaScript for beginners.", featured: false },
-  { id: "evt-4", name: "TechTalk: Future of AI", category: "Seminar", date: "2026-11-14", time: "11:30", venue: "Conference Room", description: "An alumni-led talk on how AI is changing software jobs.", featured: false },
-  { id: "evt-5", name: "Bug Bounty Night", category: "Competition", date: "2026-09-12", time: "18:00", venue: "Online", description: "Find and fix bugs in a broken project before the other teams do.", featured: false }
+  { id: "evt-1", name: "Clash Of Coders 2026", category: "Coding", date: "2026-10-24", time: "10:00", venue: "AB Basement Computer Lab 2", description: "A 3-hour individual coding contest with problems from easy to hard.", featured: true },
+  { id: "evt-2", name: "Patronous Verse", category: "Hackathon", date: "2026-11-07", time: "09:00", venue: "Auditorium", description: "A 24-hour team hackathon to build something useful for campus life.", featured: false },
+  { id: "evt-3", name: "Frontend Development", category: "Workshop", date: "2026-10-18", time: "14:00", venue: "Seminar Hall", description: "A hands-on workshop on HTML, CSS and JavaScript for beginners.", featured: false },
+  { id: "evt-4", name: "TechTalk: Future of AI", category: "Seminar", date: "2026-11-14", time: "11:30", venue: "Seminar Hall", description: "An alumni-led talk on how AI is changing software jobs.", featured: false },
+  { id: "evt-5", name: "FixIt", category: "Competition", date: "2026-09-12", time: "18:00", venue: "Online", description: "Find and fix bugs in a broken project before the other teams do.", featured: false }
 ];
 
 function readList(key) {
