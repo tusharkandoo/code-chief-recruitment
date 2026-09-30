@@ -279,6 +279,8 @@ svg { display: block; max-width: 100%; }
 .event-card-info { font-size: 11px; }
 .empty-state strong { font-size: 14px; }
 .empty-state p, .join-layout > div:nth-child(2) p, .page-hero > div:first-child > p { font-size: 12px; }
+.admin-panel .empty-state { border-color: var(--line); color: var(--text); }
+.admin-panel .empty-state p { color: var(--muted); }
 .search-field input, .select-field select, .result-count { font-size: 12px; }
 .dialog-facts small { font-size: 9px; }
 .dialog-facts strong, .dialog-event-description { font-size: 12px; }

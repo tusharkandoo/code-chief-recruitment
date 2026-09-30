@@ -780,7 +780,8 @@ function renderAdminRegistrations() {
   const selectedEvent = document.querySelector("#registration-event-filter").value;
   const sorted = [...registrations].sort((first, second) => String(second.registeredAt || "").localeCompare(String(first.registeredAt || "")));
   const matching = sorted.filter(registration => {
-    const searchable = [registration.id, registration.name, registration.email, registration.college, registration.eventName].join(" ").toLocaleLowerCase();
+    const eventName = events.find(event => event.id === registration.eventId)?.name || registration.eventName;
+    const searchable = [registration.id, registration.name, registration.email, registration.college, eventName].join(" ").toLocaleLowerCase();
     const matchesSearch = searchable.includes(query);
     const matchesEvent = selectedEvent === "all" || registration.eventId === selectedEvent;
     return matchesSearch && matchesEvent;
@@ -788,8 +789,9 @@ function renderAdminRegistrations() {
 
   document.querySelector("#registration-total").textContent = `${registrations.length} ${registrations.length === 1 ? "STUDENT" : "STUDENTS"}`;
   body.innerHTML = matching.map(registration => {
+    const eventName = events.find(event => event.id === registration.eventId)?.name || registration.eventName;
     const registeredDate = registration.registeredAt ? formatDate(registration.registeredAt.slice(0, 10), { month: "short", day: "numeric", year: "numeric" }) : "Date unavailable";
-    return `<tr><td><span class="registration-code">${escapeHtml(registration.id)}</span></td><td><strong>${escapeHtml(registration.name)}</strong></td><td>${escapeHtml(registration.email)}</td><td>${escapeHtml(registration.college)}</td><td>${escapeHtml(registration.year)}</td><td>${escapeHtml(registration.phone)}</td><td>${escapeHtml(registration.eventName)}</td><td>${escapeHtml(registeredDate)}</td></tr>`;
+    return `<tr><td><span class="registration-code">${escapeHtml(registration.id)}</span></td><td><strong>${escapeHtml(registration.name)}</strong></td><td>${escapeHtml(registration.email)}</td><td>${escapeHtml(registration.college)}</td><td>${escapeHtml(registration.year)}</td><td>${escapeHtml(registration.phone)}</td><td>${escapeHtml(eventName)}</td><td>${escapeHtml(registeredDate)}</td></tr>`;
   }).join("");
   empty.hidden = matching.length > 0;
   if (!matching.length) {
