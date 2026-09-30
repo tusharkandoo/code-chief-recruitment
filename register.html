@@ -1,46 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#111210" />
-    <meta name="description" content="Register for a campus tech club event." />
-    <title>Register — CodeChef Campus Club</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-  </head>
-  <body data-page="register">
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header">
-      <nav class="nav-shell" aria-label="Main navigation">
-        <a class="brand" href="index.html" aria-label="CodeChef Campus Club home"><span class="brand-symbol" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M8 12.5 20 6l12 6.5v15L20 34l-12-6.5v-15Z" stroke="currentColor" stroke-width="2"/><path d="m13 16 7-4 7 4-7 4-7-4Zm0 0v8l7 4m7-12v8l-7 4m0-8v8" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span><span class="brand-name">CodeChef<span>Campus Club</span></span></a>
-        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button>
-        <div class="nav-menu" id="primary-nav"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="events.html">Events</a><a class="nav-link" href="index.html#about">About</a><a class="nav-link nav-admin" href="admin.html">Admin</a><a class="button button-small button-red" href="events.html">Explore events <span aria-hidden="true">↗</span></a></div>
-      </nav>
-    </header>
-
-    <main id="main" class="register-main">
-      <div class="page-width register-layout">
-        <aside class="register-aside"><a class="back-link" href="events.html"><span aria-hidden="true">←</span> Back to events</a><span class="eyebrow">ONE GOOD YES</span><h1>Save your<br /><em>seat.</em></h1><p>We just need a few details. We’ll see you there.</p><div class="selected-event" id="selected-event"><div class="event-skeleton"></div></div><div class="local-note"><span aria-hidden="true">◈</span><p>This demo keeps registration details in this browser only. Nothing is sent to a server.</p></div></aside>
-
-        <section class="register-form-panel" aria-labelledby="register-title">
-          <div id="register-form-view"><div class="form-panel-heading"><span class="eyebrow eyebrow-light">YOUR DETAILS</span><h2 id="register-title">Let’s make it official.</h2><p>Every field is here for a reason. Promise.</p></div>
-            <div class="form-top-error" id="register-form-alert" role="alert" hidden></div>
-            <form id="registration-form" novalidate>
-              <input type="hidden" id="selected-event-id" name="eventId" />
-              <div class="field-row"><div class="form-field"><label for="student-name">Full name <span>*</span></label><input id="student-name" name="name" type="text" autocomplete="name" placeholder="e.g. Riya Sharma" maxlength="70" aria-describedby="student-name-error" required /><small class="field-error" id="student-name-error"></small></div><div class="form-field"><label for="student-email">Email address <span>*</span></label><input id="student-email" name="email" type="email" autocomplete="email" placeholder="you@college.edu" maxlength="120" aria-describedby="student-email-error" required /><small class="field-error" id="student-email-error"></small></div></div>
-              <div class="form-field"><label for="student-college">College <span>*</span></label><input id="student-college" name="college" type="text" autocomplete="organization" placeholder="Your college or institution" maxlength="110" aria-describedby="student-college-error" required /><small class="field-error" id="student-college-error"></small></div>
-              <div class="field-row"><div class="form-field"><label for="student-year">Year of study <span>*</span></label><select id="student-year" name="year" aria-describedby="student-year-error" required><option value="">Select your year</option><option value="1st year">1st year</option><option value="2nd year">2nd year</option><option value="3rd year">3rd year</option><option value="4th year">4th year</option><option value="Other">Other / graduate</option></select><small class="field-error" id="student-year-error"></small></div><div class="form-field"><label for="student-phone">Phone number <span>*</span></label><input id="student-phone" name="phone" type="tel" autocomplete="tel" inputmode="numeric" placeholder="10-digit mobile number" maxlength="15" aria-describedby="student-phone-error" required /><small class="field-error" id="student-phone-error"></small></div></div>
-              <button class="button button-red form-submit" type="submit">Submit registration <span aria-hidden="true">↗</span></button><p class="form-footnote">By registering, you confirm the details above are yours.</p>
-            </form>
-          </div>
-
-          <section class="registration-success" id="registration-success" tabindex="-1" aria-labelledby="success-title" hidden><div class="success-check" aria-hidden="true">✓</div><span class="eyebrow eyebrow-light">YOU’RE IN</span><h2 id="success-title">Registration<br /><em>successful!</em></h2><p class="success-lede" id="success-message">We’ll see you there.</p><div class="success-ticket"><div class="ticket-heading"><span>REGISTRATION ID</span><span class="confirmed-label">CONFIRMED</span></div><strong class="ticket-id" id="success-id"></strong><div class="ticket-rule"></div><div class="ticket-row"><span>Name</span><strong id="success-name"></strong></div><div class="ticket-row"><span>Event</span><strong id="success-event"></strong></div><div class="ticket-row"><span>Date</span><strong id="success-date"></strong></div></div><a class="button button-red" href="events.html">Back to events <span aria-hidden="true">↗</span></a><p class="form-footnote">Your registration is saved in this browser.</p></section>
-        </section>
-      </div>
-    </main>
-
-    <footer class="site-footer"><div class="page-width footer-main"><a class="brand" href="index.html"><span class="brand-symbol" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M8 12.5 20 6l12 6.5v15L20 34l-12-6.5v-15Z" stroke="currentColor" stroke-width="2"/><path d="m13 16 7-4 7 4-7 4-7-4Zm0 0v8l7 4m7-12v8l-7 4m0-8v8" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span><span class="brand-name">CodeChef<span>Campus Club</span></span></a><p>A student-led CodeChef club for people who make technology together.</p><div class="footer-links"><a href="events.html">Events</a><a href="index.html#about">About</a><a href="admin.html">Admin demo</a></div></div><div class="page-width footer-bottom"><span>© <span data-current-year>2026</span> CodeChef Campus Club</span><span>Made by students, for students.</span><a href="#main">Back to top ↑</a></div></footer>
-    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Register | CodeChef Club</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="register">
+<header class="site-header" id="siteHeader"></header>
+<main>
+<section class="section">
+<div class="container narrow">
+<div id="registerBox">
+<h1>Event registration</h1>
+<div class="selected" id="selectedEvent"></div>
+<form id="registerForm" novalidate>
+<div class="field"><label for="name">Full name</label><input id="name" name="name" autocomplete="name"><p class="error"></p></div>
+<div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"><p class="error"></p></div>
+<div class="field"><label for="college">College</label><input id="college" name="college"><p class="error"></p></div>
+<div class="two">
+<div class="field"><label for="year">Year</label><select id="year" name="year"><option value="">Select year</option><option>1st Year</option><option>2nd Year</option><option>3rd Year</option><option>4th Year</option></select><p class="error"></p></div>
+<div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel"><p class="error"></p></div>
+</div>
+<button class="btn btn-primary" type="submit">Submit Registration</button>
+</form>
+</div>
+<div class="success" id="success" hidden>
+<div class="tick">&#10003;</div>
+<h1>Registration Successful!</h1>
+<p id="successText"></p>
+<dl id="receipt"></dl>
+<a class="btn btn-primary" href="events.html">Back to Events</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer"><div class="container row-between"><p>CodeChef Club, college technical society.</p><nav class="foot-links"><a href="index.html">Home</a><a href="events.html">Events</a><a href="admin.html">Admin</a></nav></div></footer>
+<script src="script.js"></script>
+</body>
 </html>
