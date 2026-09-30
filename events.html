@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#111210" />
+    <meta name="description" content="Explore workshops, coding contests, hackathons and talks from your campus tech club." />
+    <title>Events — CodeChef Campus Club</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body data-page="events">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="CodeChef Campus Club home"><span class="brand-symbol" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M8 12.5 20 6l12 6.5v15L20 34l-12-6.5v-15Z" stroke="currentColor" stroke-width="2"/><path d="m13 16 7-4 7 4-7 4-7-4Zm0 0v8l7 4m7-12v8l-7 4m0-8v8" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span><span class="brand-name">CodeChef<span>Campus Club</span></span></a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button>
+        <div class="nav-menu" id="primary-nav"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="events.html" aria-current="page">Events</a><a class="nav-link" href="index.html#about">About</a><a class="nav-link nav-admin" href="admin.html">Admin</a><a class="button button-small button-red" href="events.html">Explore events <span aria-hidden="true">↗</span></a></div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="page-hero page-width"><div><span class="eyebrow"><i></i> YOUR SEMESTER, SORTED</span><h1>Find a thing<br />to <em>make.</em></h1><p>Build a new skill, meet your collaborators, or just see what happens when you show up.</p></div><div class="page-hero-side"><span class="hero-side-mark" aria-hidden="true">✳</span><span>EVENTS<br />ON CAMPUS</span></div></section>
+
+      <section class="events-page-content section-light"><div class="page-width">
+        <div class="filter-bar"><div class="search-field"><span aria-hidden="true">⌕</span><label class="visually-hidden" for="event-search">Search events by name</label><input id="event-search" type="search" placeholder="Search events by name..." autocomplete="off" /></div><div class="select-field"><label class="visually-hidden" for="category-filter">Filter by category</label><select id="category-filter"><option value="all">All categories</option><option value="Coding">Coding</option><option value="Hackathon">Hackathon</option><option value="Workshop">Workshop</option><option value="Competition">Competition</option><option value="Seminar">Seminar</option><option value="Other">Other</option></select></div><span class="result-count" id="event-count" aria-live="polite"></span></div>
+        <div class="events-grid events-page-grid" id="all-events" aria-live="polite"></div>
+      </div></section>
+    </main>
+
+    <dialog class="event-dialog" id="event-dialog" aria-label="Event details"><button class="dialog-close" type="button" data-close-dialog aria-label="Close event details">×</button><div id="event-dialog-content"></div></dialog>
+
+    <footer class="site-footer"><div class="page-width footer-main"><a class="brand" href="index.html"><span class="brand-symbol" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M8 12.5 20 6l12 6.5v15L20 34l-12-6.5v-15Z" stroke="currentColor" stroke-width="2"/><path d="m13 16 7-4 7 4-7 4-7-4Zm0 0v8l7 4m7-12v8l-7 4m0-8v8" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span><span class="brand-name">CodeChef<span>Campus Club</span></span></a><p>A student-led CodeChef club for people who make technology together.</p><div class="footer-links"><a href="events.html">Events</a><a href="index.html#about">About</a><a href="admin.html">Admin demo</a></div></div><div class="page-width footer-bottom"><span>© <span data-current-year>2026</span> CodeChef Campus Club</span><span>Made by students, for students.</span><a href="#main">Back to top ↑</a></div></footer>
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  </body>
+</html>
