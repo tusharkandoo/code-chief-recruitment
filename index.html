@@ -3,46 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Home | CodeChef Club</title>
+<title>CodeChef Campus Club | Events</title>
+<meta name="description" content="Discover coding competitions, workshops, hackathons and tech sessions happening across campus.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
-<body data-page="index">
-<header class="site-header" id="siteHeader"></header>
+<body data-page="home">
+<header class="site-header" id="site-header"></header>
 <main>
 <section class="hero">
-<div class="container hero-inner">
+<div class="container hero-grid">
 <div>
-<h1>Where ideas meet action.</h1>
-<p class="lead">Discover coding competitions, workshops, hackathons and events happening around our college community.</p>
-<div class="actions"><a class="btn btn-primary" href="events.html">Explore Events</a><a class="btn btn-outline" href="events.html#list">Register for an Event</a></div>
+<p class="eyebrow">CodeChef Campus Club</p>
+<h1 class="display">Build. Compete. Connect.</h1>
+<p class="lead">Discover coding competitions, workshops, hackathons and tech sessions happening across campus.</p>
+<div class="btn-row">
+<a class="btn btn-primary" href="events.html">Explore Events</a>
+<a class="btn btn-outline" href="#upcoming">Upcoming Events</a>
 </div>
-<aside class="next" id="nextEvent" aria-label="Next event"></aside>
+</div>
+<aside class="next-panel" id="next-event" aria-label="Next event"></aside>
 </div>
 </section>
+
 <section class="section" id="about">
-<div class="container about">
-<h2>About the club</h2>
-<div class="about-text reveal">
-<p><strong>What we do.</strong> We are a student community for people who like to code, build and compete.</p>
-<p><strong>What you learn.</strong> Problem solving, web development, teamwork and shipping a project under a deadline.</p>
-<p><strong>How to join in.</strong> Pick an event, fill in the registration form and turn up. No membership needed.</p>
+<div class="container intro">
+<div>
+<h2>More than just events.</h2>
+<p>We are a student-run technology club. Every semester we organise contests, workshops and talks so you can learn something new, build with other people and test yourself against the best on campus.</p>
+</div>
+<div class="principles">
+<div class="principle"><h3>Learn</h3><p>Hands-on workshops on web, algorithms and tools you will use in internships.</p></div>
+<div class="principle"><h3>Build</h3><p>Hackathons where ideas turn into working projects within a weekend.</p></div>
+<div class="principle"><h3>Compete</h3><p>Timed coding contests that sharpen problem solving under pressure.</p></div>
+<div class="principle"><h3>Connect</h3><p>Meet seniors, mentors and teammates from every branch and year.</p></div>
 </div>
 </div>
 </section>
-<section class="section alt">
+
+<section class="section" id="upcoming">
 <div class="container">
-<h2>Featured event</h2>
-<div id="featured"></div>
+<div class="section-head">
+<div><h2>Upcoming events</h2><p>See what's happening next.</p></div>
+<a class="btn btn-outline btn-sm" href="events.html">View all events</a>
+</div>
+<div class="event-grid" id="upcoming-grid"></div>
 </div>
 </section>
+
+<section class="section" id="featured-section">
+<div class="container">
+<div class="featured" id="featured-event"></div>
+</div>
+</section>
+
 <section class="section">
 <div class="container">
-<div class="row-between"><h2>Upcoming events</h2><a class="link" href="events.html">View all events</a></div>
-<div class="grid" id="upcomingList"></div>
+<div class="section-head"><div><h2>Why participate</h2></div></div>
+<div class="reasons">
+<div class="reason"><h3>Real practice</h3><p>Work on problems and projects instead of only reading about them.</p></div>
+<div class="reason"><h3>Open to beginners</h3><p>Most sessions start from the basics, so you can join in your first year.</p></div>
+<div class="reason"><h3>Something to show</h3><p>Leave with a project, a rank or a certificate for your resume.</p></div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="section-head"><div><h2>Browse by category</h2><p>Pick a format that fits how you like to learn.</p></div></div>
+<div class="category-grid" id="category-grid"></div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="cta">
+<div><h2>Ready to take part?</h2><p>Pick an event and register in under a minute.</p></div>
+<a class="btn btn-primary" href="events.html">Explore Events</a>
+</div>
 </div>
 </section>
 </main>
-<footer class="site-footer"><div class="container row-between"><p>CodeChef Club, college technical society.</p><nav class="foot-links"><a href="index.html">Home</a><a href="events.html">Events</a><a href="admin.html">Admin</a></nav></div></footer>
-<script src="script.js"></script>
+<footer class="site-footer" id="site-footer"></footer>
 </body>
 </html>

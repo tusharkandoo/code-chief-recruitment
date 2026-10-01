@@ -3,25 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Events | CodeChef Club</title>
+<title>Events | CodeChef Campus Club</title>
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
 <body data-page="events">
-<header class="site-header" id="siteHeader"></header>
+<header class="site-header" id="site-header"></header>
 <main>
-<section class="section">
+<section class="page-header">
 <div class="container">
-<h1>Events</h1>
-<div class="toolbar">
-<input type="search" id="search" placeholder="Search events by name" aria-label="Search events">
-<select id="category" aria-label="Filter by category"></select>
+<p class="eyebrow">Campus Events</p>
+<h1>Find something worth showing up for.</h1>
+<p class="lead">Explore workshops, coding challenges, hackathons and conversations happening across campus.</p>
 </div>
-<p class="count" id="resultCount" aria-live="polite"></p>
-<div class="grid" id="list"></div>
+</section>
+<section>
+<div class="container">
+<div class="toolbar" role="search">
+<input class="input" id="search" type="search" placeholder="Search by event name..." aria-label="Search events">
+<select class="select" id="category" aria-label="Category">
+<option value="all">All categories</option>
+<option value="Coding">Coding</option>
+<option value="Hackathon">Hackathon</option>
+<option value="Workshop">Workshop</option>
+<option value="Seminar">Seminar</option>
+<option value="Competition">Competition</option>
+</select>
+<select class="select" id="status" aria-label="Status">
+<option value="all">All</option>
+<option value="upcoming">Upcoming</option>
+<option value="past">Past</option>
+</select>
+<select class="select" id="sort" aria-label="Sort by">
+<option value="date">Date</option>
+<option value="name">A-Z</option>
+</select>
+</div>
+<p class="result-count" id="result-count" aria-live="polite"></p>
+<div class="event-grid events-grid" id="events-grid"></div>
 </div>
 </section>
 </main>
-<footer class="site-footer"><div class="container row-between"><p>CodeChef Club, college technical society.</p><nav class="foot-links"><a href="index.html">Home</a><a href="events.html">Events</a><a href="admin.html">Admin</a></nav></div></footer>
-<script src="script.js"></script>
+<footer class="site-footer" id="site-footer"></footer>
 </body>
 </html>

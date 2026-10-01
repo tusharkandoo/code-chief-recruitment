@@ -3,39 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Register | CodeChef Club</title>
+<title>Register | CodeChef Campus Club</title>
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
 <body data-page="register">
-<header class="site-header" id="siteHeader"></header>
-<main>
-<section class="section">
-<div class="container narrow">
-<div id="registerBox">
-<h1>Event registration</h1>
-<div class="selected" id="selectedEvent"></div>
-<form id="registerForm" novalidate>
-<div class="field"><label for="name">Full name</label><input id="name" name="name" autocomplete="name"><p class="error"></p></div>
-<div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"><p class="error"></p></div>
-<div class="field"><label for="college">College</label><input id="college" name="college"><p class="error"></p></div>
-<div class="two">
-<div class="field"><label for="year">Year</label><select id="year" name="year"><option value="">Select year</option><option>1st Year</option><option>2nd Year</option><option>3rd Year</option><option>4th Year</option></select><p class="error"></p></div>
-<div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel"><p class="error"></p></div>
-</div>
-<button class="btn btn-primary" type="submit">Submit Registration</button>
-</form>
-</div>
-<div class="success" id="success" hidden>
-<div class="tick">&#10003;</div>
-<h1>Registration Successful!</h1>
-<p id="successText"></p>
-<dl id="receipt"></dl>
-<a class="btn btn-primary" href="events.html">Back to Events</a>
-</div>
-</div>
-</section>
-</main>
-<footer class="site-footer"><div class="container row-between"><p>CodeChef Club, college technical society.</p><nav class="foot-links"><a href="index.html">Home</a><a href="events.html">Events</a><a href="admin.html">Admin</a></nav></div></footer>
-<script src="script.js"></script>
+<header class="site-header" id="site-header"></header>
+<main id="register-root"></main>
+<footer class="site-footer" id="site-footer"></footer>
 </body>
 </html>
